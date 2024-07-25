@@ -16,6 +16,12 @@ public class SearchStepDefinitions {
         actor.wasAbleTo(NavigateTo.theSearchHomePage());
     }
 
+    @Given("{actor} test api")
+    public void testsApi(Actor actor) {
+        actor.attemptsTo(LookForInformation.apiTest());
+
+    }
+
     @When("{actor} looks up {string}")
     public void searchesFor(Actor actor, String term) {
         actor.attemptsTo(
